@@ -1,4 +1,4 @@
-# anonymizer
+# Anonymization.py
 This repo will hold the Python script used to anonymize essays. 
 
 Main Method:
