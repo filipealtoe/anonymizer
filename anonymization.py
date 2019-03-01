@@ -1,5 +1,5 @@
 '''
-Created on Feb 15, 2019
+Created on March 01, 2019
 Python: 3.4.3
 Packages Used: 
 pip install pdfminer.six
@@ -79,7 +79,6 @@ def format_alltokens(tokens):
     alltokens = []
     for token in tokens:
         token = str(token[0])
-#        splitToken = token.split('[TOKEN]')[0]
         alltokens.append(token)    
     return alltokens
     
