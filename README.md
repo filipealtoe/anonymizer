@@ -1,8 +1,8 @@
 # anonymizer
 This repo will hold the Python script used to anonymize essays. 
 
-Main Funtion:
-anonymizer(studentsDir, studentsFile, tokensDir, tokensFile, essaysDir, outputDir, replacementTOKEN)
+Main Method:
+Anonymizer.anonymizer(studentsDir, studentsFile, tokensDir, tokensFile, essaysDir, outputDir, replacementTOKEN)
 
 The function returns the total number of anonymized files.
 
