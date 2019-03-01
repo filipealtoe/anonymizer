@@ -18,3 +18,5 @@ All student essays are to be placed in the essaysDir input directory. Currently,
 The anonymizes will read each file from the Essays directory, execute its algorithm, and save each anonymized TXT file on the outputDir input parameter directory. Each file will be named, student1.txt, student2.txt, etc, in the order the PDFs are in the directory. This hopefuly makes it easier for the utilization of the code when traceability between the anonymized student essay and other data linked to the student (e.g. grades, grader, etc).
 
 This repo includes two anedoctal essays in the Essays directory and their corresponding anonymized output files in the OutputFiles directory. The corresponding Students.csv file can be found on the Students directory. The initial list of tokens can be found on the Tokens.csv file inside the Tokens directory.
+
+Run  anonymizertest.py to repeat results.

@@ -6,25 +6,46 @@ pip install pdfminer.six
 
 @author: Filipe Altoe
 '''
-import argparse
+
 import os, sys
 from os import listdir
 from os.path import isfile, join
 import csv
-#import PyPDF2
-import io
 import pdf
-from ensurepip import _uninstall
 
-replacementTOKEN = "student"
 
+class Anonymizer:
+
+    replacementTOKEN = "student"
+    
+    #This is the main method
+    @staticmethod    
+    def anonymizer(studentsDir="Students", studentsFile="Students.csv", tokensDir="Tokens", tokensFile="Tokens.csv", essaysDir="Essays", outputDir="OutputFiles", replacementTOKEN="[student]"):
+        studentNumber = 1
+        try:
+            students = extract_students(studentsDir, studentsFile)
+            tokens = extract_tokens(tokensDir, tokensFile)
+            tokens= format_alltokens(tokens)
+            essays_paths = get_path(essaysDir)
+            allEssayfiles = [f for f in listdir(essays_paths) if isfile(join(essays_paths, f))]
+            for essayFile, student in zip(allEssayfiles, students):
+                testpath = os.path.join(essays_paths, essayFile)
+                essayText = extract_Essay_Text(testpath)
+                anonymizedText = replace_tokens(tokens, student, essayText, replacementTOKEN)
+                outputFileName = replacementTOKEN + str(studentNumber)
+                save_output_file(outputDir, outputFileName, anonymizedText)
+                studentNumber += 1
+            return (studentNumber-1)
+        except:
+            return (studentNumber-1)
+    
 def get_path(directoryName):
     path = os.path.dirname(sys.argv[0])
     if not path:
         path = '.'
     composed_path = os.path.join(path, directoryName)
     return composed_path
-
+    
 def read_csv(dirName, fileName):
     dirPath = get_path(dirName)
     file = open(os.path.join(dirPath, fileName))
@@ -38,7 +59,7 @@ def read_csv(dirName, fileName):
             column[h].append(v)
     file.close
     return column
-    
+        
 def extract_students(dirName="Students", fileName="Students.csv"):
     students_paths = get_path(dirName)
     completeName = os.path.join(students_paths, fileName)
@@ -100,27 +121,3 @@ def replace_tokens(alltokens, student, textContent, replacementTOKEN):
         if (parameter == ""): continue
         textContent = textContent.replace(parameter, replacementTOKEN)
     return textContent    
-
-#This is the main function    
-def anonymizer(studentsDir="Students", studentsFile="Students.csv", tokensDir="Tokens", tokensFile="Tokens.csv", essaysDir="Essays", outputDir="OutputFiles", replacementTOKEN="[student]"):
-    try:
-        students = extract_students(studentsDir, studentsFile)
-        tokens = extract_tokens(tokensDir, tokensFile)
-        tokens= format_alltokens(tokens)
-        essays_paths = get_path(essaysDir)
-        allEssayfiles = [f for f in listdir(essays_paths) if isfile(join(essays_paths, f))]
-        studentNumber = 1
-        for essayFile, student in zip(allEssayfiles, students):
-            testpath = os.path.join(essays_paths, essayFile)
-            essayText = extract_Essay_Text(testpath)
-            anonymizedText = replace_tokens(tokens, student, essayText, replacementTOKEN)
-            outputFileName = replacementTOKEN + str(studentNumber)
-            save_output_file(outputDir, outputFileName, anonymizedText)
-            studentNumber += 1
-        return (studentNumber-1)
-    except:
-        return (studentNumber-1)
-    
-if __name__ == '__main__':
-    numbConvertedFiles = anonymizer()
-    print (numbConvertedFiles)
