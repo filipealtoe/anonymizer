@@ -12,7 +12,7 @@ from os import listdir
 from os.path import isfile, join
 import csv
 import pdf
-
+import re
 
 class Anonymizer:
 
@@ -36,7 +36,8 @@ class Anonymizer:
                 save_output_file(outputDir, outputFileName, anonymizedText)
                 studentNumber += 1
             return (studentNumber-1)
-        except:
+        except Exception as e:
+            print(e)
             return (studentNumber-1)
     
 def get_path(directoryName):
@@ -105,19 +106,15 @@ def format_alltokens(tokens):
     
 #This is where the replacements happen. It uses the input tokens on all parsed names for replacement and replaces the other student parameters without using the tokens
 def replace_tokens(alltokens, student, textContent, replacementTOKEN):
-    allNames = student['Name']
-    for token in alltokens:
-        for name in allNames:
-            if (name == ""): continue
-            newToken = token + name
-            replacement = token + replacementTOKEN
-            textContent = textContent.replace(newToken, replacement)
-            newToken = name + token
-            replacement = replacementTOKEN + token
-            textContent = textContent.replace(newToken, replacement)
-    student.pop('Name')
+    allNames = student.pop('Name')
+    # student's name might be contained within their email, so we want to substitute that first
     otherParameters = student.values()
     for parameter in otherParameters:
         if (parameter == ""): continue
         textContent = textContent.replace(parameter, replacementTOKEN)
+    # use regexes instead of replace
+    for name in allNames:
+        namestr = "(\W)*".join(name)
+        myRegex = re.compile(namestr, re.IGNORECASE)
+        textContent = myRegex.sub(replacementTOKEN, textContent)
     return textContent    
