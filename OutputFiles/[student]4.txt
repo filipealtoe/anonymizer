@@ -1,0 +1,14 @@
+Test Essay 4 
+
+[student] [student] [student] 
+
+[student] 
+
+Yesterday, [student] decided that she wanted to add an apostrophe in her name. Now, her name is 
+[student]. 
+
+Today, [student] decided that she wanted to stop using the apostrophe in her name. Now, her name is 
+[student] again. 
+
+Similarly, people with the last name O’Connell may have their boarding passes printed as OCONNELL or 
+O CONNELL and we would need to anonymize all of that.
