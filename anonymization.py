@@ -114,7 +114,8 @@ def replace_tokens(alltokens, student, textContent, replacementTOKEN):
         textContent = textContent.replace(parameter, replacementTOKEN)
     # use regexes instead of replace
     for name in allNames:
-        namestr = "(\W)*".join(name)
+        namestr = re.sub(r'\W+', '', name)
+        namestr = "(\W)*".join(namestr)
         myRegex = re.compile(namestr, re.IGNORECASE)
         textContent = myRegex.sub(replacementTOKEN, textContent)
     return textContent    

@@ -1,14 +1,14 @@
 Test Essay 4 
 
-[student] [student] [student] 
+Denise Grace Kutnick 
 
 [student] 
 
-Yesterday, [student] decided that she wanted to add an apostrophe in her name. Now, her name is 
-[student]. 
+Yesterday, Denise decided that she wanted to add an apostrophe in her name. Now, her name is 
+D’enise. 
 
-Today, [student] decided that she wanted to stop using the apostrophe in her name. Now, her name is 
-[student] again. 
+Today, D’enise decided that she wanted to stop using the apostrophe in her name. Now, her name is 
+Denise again. 
 
-Similarly, people with the last name O’Connell may have their boarding passes printed as OCONNELL or 
-O CONNELL and we would need to anonymize all of that.
+Similarly, people with the last name [student] may have their boarding passes printed as [student] or 
+[student] and we would need to anonymize all of that.
