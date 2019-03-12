@@ -1,466 +1,190 @@
-1
-OMS CS7637: Knowledge-Based AI (Fall 2018)
-Homework 1
-[student] [student]
-[student]
-Question 1
- 
-A snapshot of the semantic network representing the Kylo, Snoke, and Rey
- 
-transport problem is below: 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-Figure 1. A semantic network, with an example transition between two states. In the left-hand state,
-Rey, Snoke, and Kylo are on the planet, while the shuttle is on the ship. In the right-hand state, the
-shuttle has arrived from the ship to the planet. 
- 
- 
- 
- 
-The full solution to this problem, using a generate and test approach on the above
-semantic network, is available below (please zoom in) and in Appendix 1 (in a
- 
- 
-slightly larger version).  
-   
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 2
- 
-Figure 2. A semantic network, solved using a generate and test approach. The network can be read
-from left to right. Please zoom in; a larger version is available in the Appendix. 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-Per the instructions, the generator was smart enough to make only valid moves -
-   
- 
-that is, moves that did not violate the rules (such as the shuttle only traveling with
-zero or one passenger). However, it was not smart enough to make strategic
- 
-moves, and it was not smart enough to make moves which resulted in valid states.  
-The tester scanned through each new state and eliminated those where that state
- 
-had already been seen in the network (for example, moving Rey from the planet
- 
-(state 1) to the orbiting ship (state 2) and back (state 3) would result in state 3
- 
- 
-being eliminated), or states that were invalid by the rules (for example, Kylo and
- 
-Rey being alone without the shuttle). The solution took eight steps. 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-Question 2 
-An AI cynic: Jaron Lanier
-Jaron Lanier is a prominent Silicon Valley technologist and the author of several
-books of generalized tech skepticism (Lanier 2010, 2012, 2017, 2018). He has been
- 3
-a voice for caution against the excitement and optimism that has surrounded
-technologies like the Internet, social media and artificial intelligence. He has taken,
-in general, a strongly humanist standpoint: arguing against the standardization of
-human experience when mediated through an imperfectly-designed digital lens
-(Lanier 2010).
-On artificial intelligence, he argues that its promises are overblown and even the
-debate surrounding it is itself askew, and confuses us, and does real harm to society
-and to our skills as engineers and scientists (Lanier 2014). In particular, rather than
-treating AI as a technical problem with modest near-term aspirations, Lanier notes
-that discussions surrounding it involve people dramatizing their beliefs with an
-end-of-days scenario (Khatchadourian 2015). He notes how this thinking is linked
-to the boom-and-bust cycle of AI winters - that is, overblown expectations cycling
-with disillusionment and existential fear. He also notes the hidden economic costs of
-big data and crowdsourced human labor which power AI algorithms (Lanier 2014;
-Intelligence Squared U.S. 2016).
-An AI optimist: Ray Kurzweil
-An exemplar of Laniers religiously-minded prognosticators is Ray Kurzweil, a
-long-time proponent of transhumanism - that is, the blending of human and
-artificial bodies to achieve longer lives and expanded consciousness (Kurzweil 1999,
-2005). Kurzweil has long used the language of myth and religion in his predictions
-(one book is called The Age of Spiritual Machines); and his predictions are large-scale
-and positive. For example, regarding the use of nanotechnology to enhance
-consciousness, Kurzweil notes that, by the 2030s [...] our thinking then will be a
-hybrid of biological and non-biological thinking [...] enabling a qualitative leap in
-culture and technology (Kurzweil 2014a). Regarding fears of AI as an existential
-threat, he notes that we do have time to devise ethical standards for managing this
-(Kurzweil 2014b).
-Kurzweil
-for
-example around automation and AI displacing human workers. He notes that, for
-every job we eliminate, were going to create more jobs at the top of the skill ladder
-- jobs in industries and concepts that dont exist yet (Lev-Ram 2017).
-furthermore addresses the more pragmatic economic anxieties,
- 4
-A comparison and conclusion
-Comparing Kurzweil to Laniers arguments, there is disagreement on both the
-content (how will AI develop in the near and far future?) as well as the meta (how
-do we think about AI?). In his 2014 TED talk, Kurzweil likens the Singularity -
-when AI and human consciousnesses meld and expand - to an evolutionary leap akin
-to the final scene in 2001: A Space Odyssey,auguring in a new age of culture and
-technology (Kurzweil 2014a). Lanier is more circumspect and less fanciful: his
-expectations for AIs development are more modest, and he argues that the
-grandiose way in which AI is discussed actually slowsreal, technological progress
-(Lanier 2014).
-They somewhat talk past each other on the more immediate issue of AIs economic
-consequences - Kurzweil waves away the risks of economic restructuring (were
-going to create more jobs), while Lanier notes the ways in which AI facades can
-mask crowdsourced humanintelligence (e.g. Google machine translation leveraging
-large corpora of human-translated texts - see Lanier 2014), and that this system is
-unsustainable.
-My opinion is closer to Laniers than Kurzweils - though I found Kurzweils ideas
-influential many years ago, when I was beginning to get interested in AI. I think my
-process from Kurzweil-sympathetic to Lanier-sympathetic is also fairly typical:
-Kurzweil is often vague on the technical details, but grand in scope - good for a
-general or beginner audience. Lanier is meticulous in picking apart the realities of
-the technology, and the socio-economic factors that drive its development - good for
-In terms of AI realists, Andrej Karpathy, Director of Artificial
-the expert.
-Intelligence at Tesla, combines Kurzweils visionary predictions with Laniers
-technical scrutiny - yet he does this without mythologizing AI one way or the
-other. For this reason, his work is sometimes even moredisturbing to me - since he
-leaps that are
-precisely and rigorously outlines the enormous technological
-imminent, yet leaves it up in the air as to how they could change our world
-(Karpathy 2017a, 2017b).
- 5
-Question 3
-The General Data Protection Regulation (GDPR) became European law on May 25,
-2018 (Burgess 2018). It allows users to have more control over their personally
-identifiable information (PII) online; specifically, companies which collect online
-information on individuals must first obtain their consent. This moves from an
-opt-out to an opt-in system. Furthermore, individuals have a right to access their
-information, data breaches must be reported to the countrys data protection
-regulator (based on where the company is located), and companies over a certain
-size must hire a data protection officer to ensure compliance with the regulation
-(Burgess 2018).
-The GDPR has clear implications for companies which sell services personalized by
-artificial intelligence. For example, for users whose data becomes part of machine
-learning algorithms or deep learning networks, those users must explicitly consent
-to having their data collected and used in this way. In the model training process, as
-much PII as possible should be removed during the analysis - this is in order to
-protect against unexpected data breaches.
-One company for which personalization is the essential service is Facebook. While
-other social media companies - such as Twitter or LinkedIn - also collect significant
-PII and offer personalized feeds, they can also offer relatively generic feeds as an
-alternative. For example, Twitter does not rely on as much PII as Facebook - there is
-no need to use your real name, and you can select how to tailor your feed by
-choosing who to follow. LinkedIn requires much more PII (name and employment
-history), and personalizes its recommendations for who to connect with, but does
-not use a personalized news feed in the same way as Facebook does to drive
-engagement.
-Facebook, indeed, is unique in this regard. Its business is essentially tied to its use of
-personal data; both the service it provides its users, and the revenue it receives from
-advertisers.
-For example: Facebook has long held a real name policy - criticized by digital civil
-liberties activists for either excluding vulnerable populations or, if they want to use
-the service, exposing them to bullying or harassment (Doctorow 2011). Beyond that
-baseline PII requirement, Facebook actively collects additional PII (date and place of
- 6
-birth, current place of residence, educational and employment history) and passively
-collects social and behavioral data (who your friends are, which articles you click on
-and read, how low your phone battery is). It buys and sells user data with third-party
-data brokers, advertising agencies, and other companies (LaForgia and Dance 2018;
-Head 2014; Angwin et al. 2016). Indeed, its actual bottom line - its revenue and
-profitability - comes from its role as one of the worlds biggest data collection
-companies.
-Its service to users, however, is in the personalized news feed. In order to continue
-collecting data which it can then share with third parties, Facebook needs to ensure
-that users continue engaging with the site. To do this, machine learning algorithms
-personalize each individuals feed - feed items which drive engagement (clicking the
-link, sharing the post, spending more time on the site) reward the algorithm. The
-average user is unlikely to know both how much data is collected by Facebook, and
-how the recommended posts on their feed are selected (Smith 2016).
-As such, the GDPR is a direct blow to Facebooks service and bottom line. Given
-that much of Facebooks AI personalization and data broker revenue derives from
-the large quantity of PII data it collects about each user, and given the regular public
-relations scandals surrounding Facebooks data collection and privacy violations (e.g.
-Cambridge Analytica - see Granville 2018), it is clear that (a) Facebooks business
-would be enormously slowed if it had to obtain true consent for every piece of data
-it collects from its 2+ billion monthly active users, and (b) Facebook therefore has an
-economic incentive to use opt-out-style privacy settings, and to minimize the
-process of gaining consent. Yet a minimal, hidden consent (for example, buried in
-Terms & Conditions or hard-to-find privacy settings and written in legalese) is no
-true consent at all - and flies in the face of the spirit of the GDPR. As such, Facebook
-would need to make significant changes to adhere properly.
-How could it adhere to the GDPR? It depends on how the GDPR would be enforced.
-On the one hand, Facebook already allows users to download their data archives. On
-the other, its consent and opt-in process is - in my opinion - insufficient. To truly
-address the spirit of the GDPR, Facebook would need to frequently alert users to
-which data is collected and how it is used: for example, whether their data has been
-used in training machine learning algorithms, how and why their posts appear in
-other feeds, what other companies their data was shared with, and so on.
- 7
-Regardless of the spirit of the GDPR, much depends on how it is enforced. As of the
-summer of 2018, European Economic Area users mostly saw pop-ups explaining, via
-a few short paragraphs, how their data was used. Most of these pop-ups included an
-explicit I Agree consent-style button; a few allowed an opt out (where the service
-could be used without agreement). Whether these short pop-ups truly reflect the
-GDPRs ambitions - that is, for users to understand how their data is used, and to
-knowingly allow this data collection - is unclear. Facebook, as the archetypal violator
-of user privacy, continues to operate in Europe - demonstrating that the regulators
-are, for now, taking a pragmatic approach. It remains to be seen whether this will
-continue: public opinion regarding Facebook may change, or new regulators may
-enforce the law more stringently.
-Question 4
-I will compare the following two depictions of AI from popular culture:
- Data, from Star Trek: The Next Generation, as an example of a positive
-representation. Data is an android and Starfleet officer aboard the USS
-Enterprise.
- The Cylons, from the mid-2000s Battlestar Galacticaremake, as an example of
-a negative representation. The Cylons were robots who were previously
-enslaved by humans; they then rebelled and upgraded into more human-like
-android bodies.
-In both television shows, AI - coupled with advanced robotics - have made artificial
-people indistinguishable from humans. This raises challenging questions regarding
-selfhood and identity: what makes a person a person? Do artificial intelligences have
-souls? What are the moral rights and obligations of artificial persons? Can they be
-enslaved as property? Do they suffer, and should our compassion extend to them?
-In the case of Data, and in keeping with Star Treks utopian philosophy, these
-challenges are addressed with rationality and humanism. Indeed, humanism is
-extended early on to include Data. For example, in the season 2 episode, The
-Measure of a Man, Datas personhood is put on trial - literally - when scientists
-argue that Data is Starfleet property and can be dismantled for research and study.
-Arguing on his behalf, Datas colleagues come to his defense with a legalistic
-argument about what makes Data sentient. They argue that, given that his artificial
- 8
-intelligence is so advanced, Data meets two important criteria for qualifying as
-sentient life (and therefore the right to self-determination): he is intelligent and he is
-self-aware. Other episodes throughout the series explore Datas attempts to deepen
-and enrich this personhood: he is particularly challenged by understanding
-it seems that Datas AI - as
-biological persons emotional responses. Indeed,
-embodied in his positronic brain - is a little closer to optimal AI on the optimal
-versus human-like AI spectrum. Data is often unable to understand emotional
-responses which he perceives to be irrational or self-defeating, though he is anxious
-to experience these responses as well. Data fulfills the same narrative role that Spock
-fulfilled from the original series; however, instead of a cultural conditioning which
-leads a character to suppress
-their emotional responses in the pursuit of
-hyper-rationality, Data is physically incapable of experiencing these responses - and
-views this as a flaw. In a way, Star Trekis recognizing the value of both optimal
-rationality and human-like emotional response.
-The Cylons from Battlestar Galacticaface many of the same challenges as Data: their
-advanced AI blurs the lines between biological and artificial personhood, and this
-causes tension between themselves and humans. Yet this tension is not resolved in a
-thoughtful, one-off court case; rather, it turns violent and lasts many years. Much of
-the Cylons actions are motivated by a religious belief in their own personhood - the
-conflict then stems largely from humans inability to accept the Cylons as deserving
-of the same rights and privileges as biological persons. First enslaved (again, similar
-to Data being considered Starfleet property), the Cylons violently rebel, killing a
-majority of the human population, and pursuing the last surviving military ship - the
-Battlestar Galactica - in an effort to achieve total genocide. In the first episode of the
-series, a human representative waits to meet a Cylon representative in neutral
-territory; when the Cylon arrives, she asks the human: Are you alive? Prove it.
-This essential question - how can any individual, human or Cylon, prove their
-sentience and their personhood? - drives the rest of the series.
-The two depictions are thus essentially addressing the same issue: when AI becomes
-so advanced as to become indistinguishable from - or even surpass - human
-intelligence, what will the rights of these AI entities be? Neither depiction portrays
-AI as inherently good or evil. Indeed, one of the pleasures of Battlestar Galacticas
-storytelling is the way we regularly confront moral ambiguity on both sides - human
-and Cylon (there are many sympathetic Cylons, as well as instances of humans
- 9
-committing terrorism or knowingly killing innocents). Instead, the two depictions
-diverge in the way they address the problem of personhood - either with sober
-discussion, or war - and this is largely a function of the universes in which they take
-place. The universe of Star Trek- especially the Federation and Starfleet - are guided
-by Gene Roddenberrys utopian principles of
-and tolerance.
-(Roddenberry, for example, instituted a no conflict among the crew rule among
-the writers. See Newitz 2017.) The universe of Battlestar Galactica, on the other hand,
-is less enlightened: it is tribal and deeply steeped in mysticism (for example, the
-humans worship at a polytheistic pantheon of Olympian gods; the Cylons are
-monotheistic, praying to an Abrahamic god). As such, the two depictions are
-compatible - even similar (Data is, after all, basically a Cylon) - but their contextual
-depictions, the universes in which they live, are not.
-rationality
-References
-Everything It Really Knows About Them.
-https://www.propublica.org/ 
-1. Angwin, J., Mattu, S. & Parris Jr, T. (2016). Facebook Doesnt Tell Users
-ProPublica. Retrieved from
-2. Burgess, M. (2018, June). What is GDPR? The summary guide to GDPR
-compliance in the UK. Wired UK. Retrieved from https://www.wired.co.uk/
-3. Doctorow, C. (2011, August). Google Plus forces us to discuss identity. The
-Guardian. Retrieved from https://www.theguardian.com/
-Know as Fallout Widens. The New York Times.
-4. Granville, K. (2018). Facebook and Cambridge Analytica: What You Need to
-5. Head, B. (2014). MasterCard to access Facebook user data. The Age. 
-6.
-Intelligence Squared U.S. Debates (2016). Should We Trust The Promise of
-from
-Artificial
-https://www.intelligencesquaredus.org/debates/artificial-intelligence-risks-
-could-outweigh-rewards
-Retrieved
-Intelligence?
-7. Karpathy, A. (2017a). Where will AGI come from? Y Conf 2017.Retrieved
-from
-https://ivenzor.com/wp-content/uploads/2018/07/yconftalk-17090220091
-6.pdf
- 10
-from
-8. Karpathy, A.
-(2017b).
-Software
-2.0.
-Medium Retrieved
-https://medium.com/@karpathy/software-2-0-a64152b37c35
-9. Khatchadourian, R. (2015, November). The Doomsday Invention: Will
-intelligence bring us utopia or destruction? The New Yorker.
-artificial
-Retrieved from http://newyorker.com
-10. Kurzweil, R. (1999). The Age of Spiritual Machines: When Computers Exceed
-11. Kurzweil, R. (2005). The Singularity Is Near: When Humans Transcend Biology.
-Human Intelligence. Penguin Books.
-Penguin Books.
-12. Kurzweil, R. (2014a, March). Get ready for hybrid thinking. TED. Retrieved
-from https://www.ted.com/
-13. Kurzweil, R. (2014b, December). Dont Fear Artificial Intelligence. Time.
-Retrieved from http://time.com/
-14. LaForgia, M. & Dance, G.J.X. (2018). Facebook Gave Data Access to Chinese
-Firm Flagged by U.S. Intelligence. The New York Times.
-15. Lanier, J. (2010). You Are Not a Gadget. Vintage.
-16. Lanier, J. (2012). Who Owns the Future? Simon & Schuster.
-of AI.
-17. Lanier,
-The Myth
-(2014)
-J.
-https://www.edge.org/
-Edge. Retrieved
-from
-18. Lanier, J. (2017). Dawn of the New Everything. Henry Holt and Co.
-19. Lanier, J. (2018). Ten Arguments for Deleting Your Social Media Accounts Right
-Now. Henry Holt and Co.
-20. Lev-Ram, M. (2017). Why Futurist Ray Kurzweil Isn't Worried About
-Technology Stealing Your Job. Fortune. Retrieved from http://fortune.com/
-21. Newitz, A. (2017). New Star Trek series will abandon Gene Roddenberrys
-cardinal rule. Ars Technica. Retrieved from https://arstechnica.com/
-Retrieved
-feed
-http://www.pewresearch.org/ 
-22. Smith, A. (2016). Many Facebook users dont understand how the sites news
-from
-works.
-Center.
-Pew
-Research
- Appendix: Question 1 - Semantic network, fully solved
+[student] [student] 
+CS 6460 
+Spring 2019 
+Qualifier Question 
+Prompt 
+You've identified several potential sources of bias in education.  What quantitative methods have been used 
+to detect the bias in such a way as to avoid inadvertently picking up other correlated factors and demonstrate 
+causality? How can you apply this to the topics you mention? 
+Introduction 
+Bias  in  education  is  a  growing  area  of  research,  especially  as  the  societal  push  for  equality  in  the  education  system 
+becomes  stronger.  However,  humans  still  tend  to  be  especially  skeptical  of  research  findings  on  bias,  because  they 
+conflate the idea of admitting the existence of bias with admitting that they themselves are biased (Saul, 2013). While 
+maintaining a healthy dose of skepticism is perfectly reasonable in many scientific scenarios, bias in traditional classroom 
+environments has been experimented and evidenced beyond the scope of reasonable doubt. The goal of my research is 
+to perform several quantitative experiments in the field of bias in online education to add to the growing amount of 
+evidence indicating existence of bias in online education. In this paper, I will introduce several popular multidisciplinary 
+quantitative  research  and  experimental  methodologies,  explain  how  they  have  previously  been  used  to  establish 
+statistically  significant  findings  within  both  human  and  algorithmic  bias,  discuss  specific  examples  of  these 
+methodologies  within  the  field  of  education,  and  describe  how  I  plan  to  use  these  methodologies  within  my  own 
+research. 
+Quantitatively Measuring Human Bias 
+In the decades that human bias has been explored in a classroom context, researchers have utilized increased amounts 
+of educational data and advances in technology to provide stronger statistical evidence to support their claims. As such, 
+there are many different quantitative techniques that a researcher can choose to use in their study. Making the decision 
+to use certain techniques over others primarily depends on whether the bias is detected through a controlled experiment 
+that  generates  new  evidence  or  through  a  novel  analysis  of  existing  data.  Secondarily,  the  quality  of  the  data  being 
+generated or analyzed also helps to determine the most effective quantitative technique to use for statistical analyses. 
+Controlled experiments can be used as a method of gathering data to detect and analyze human bias in education. While 
+controlled experiments arent always grounded in quantitative evidence, they provide a strong definition for causality 
+and a structured framework to test causality. To demonstrate causality through a controlled experiment, researchers 
+must show statistically significant evidence supporting a hypothesis, or they must show similarly statistically significant 
+evidence negating the contrapositive, which is the partial or full opposite of the hypothesis (Cohen & Nagel, 1934). 
+Cohen and Nagel state that experimental evidence can be considered causally valid if every variable and invariable aspect 
+of the experiment is controlled for, with the exception of the variables that the hypothesis is testing (1934). 
+In existing research, most controlled empirical experiments looking to show causality have followed one of two designs: 
+between-subjects design, where participants in a study are separated into groups and each group is exposed to a separate 
+condition and differences are measured between groups, and within-subjects design, where participants in a study are 
+exposed to all of the conditions and differences are measured within the entire participant space (Charness, Gneezy, & 
+Kuhn,  2012). Both between-subjects  and  within-subjects  designs  have  been  used  in  existing  experiments on  bias  in 
+ [student] [student] 
+CS 6460 
+Spring 2019 
+education. Here are two examples of controlled experiments that study first-name bias in the education system  one 
+uses between-subjects design, and the other uses within-subjects design: 
+  Between-Subjects  Design:  In this  study,  researchers measured first-name  bias  in  the  online  classroom  by 
+having the same instructor pose as both male and female for different sections of their class (MacNell, Driscoll, 
+& Hunt, 2015). MacNell et al.s study is an example of between-subjects design: each student was exposed to 
+either the male or female presentation of the instructor (2015). This experiment was performed with multiple 
+instructors of all genders to verify that the results were statistically significant (MacNell, Driscoll, & Hunt, 2015). 
+  Within-Subjects  Design:  In  this  study,  researchers  created  posts  in  an  online  classroom  using  fabricated 
+student names, and measured the subsequent replies and engagement towards the post based on the perceived 
+race and ethnicity from the students name (Baker, Dee, Evans, & John, 2018). Baker et al.s study used within-
+subjects design: each class in the study was exposed to posts by each fabricated student name, and the other 
+dependent variables (contents of the post, date/time the post was created) were rotated within the classes to 
+avoid false correlations (2018). 
+Controlled experiments can be designed to show strong links of causality in their results, but designing an experiment 
+also has no shortage of challenges, with the biggest challenge being that the researchers might project their own biases 
+onto their experiments design. In the two examples above, the authors specifically discussed measures that they took 
+to validate their experiments and results. Similarly, there are several internal biases that any researcher should minimize 
+or avoid in their experiments to validate their results: selection bias may occur if there are significant differences between 
+populations selected for the control/experimental research and the general population, historical and maturation bias 
+may occur if factors such as time affect the experiment and are not accounted for, and the absence of control data might 
+render experimental data completely invalid (Kirk, 2007). While checking a controlled experiment for validity is not a 
+purely quantitative task, it is as important to producing reliable results as any other quantitative measure would be. 
+In addition to controlled experiments, there are several other experimental methods designed to quantify bias, and the 
+Implicit Association Test (IAT) has been one of the most popular methods for decades. In the IAT, participants are 
+shown pictures that fall into one of two categories (such as dogs and cats), they are then instructed to label pictures 
+within  a  category  as  either  pleasant  or  unpleasant,  and  bias  is  measured  as  quicker  association  (whether  positive  or 
+negative) towards one category of pictures (Greenwald, McGhee, & Schwartz, 1998). The IAT acts as a starting point 
+to identify potential biases in a person, but it is limited in scope because it cant tell researchers anything about how 
+ones implicit biases manifest themselves in a classroom environment. Therefore, causality (at least in the context of 
+bias in education) cannot be demonstrated using the IAT alone. 
+Another method of demonstrating the presence of human bias in education is through a novel statistical analysis of pre-
+existing data. When working with existing datasets, several statistical techniques can be used to validate findings of bias. 
+The  proper  statistical  technique  to  use  may  depend  on  several  factors  within  the  dataset,  including  the  number  of 
+variables/features, the number of entries, and whether the dataset is obtained from a single study or a meta-analysis of 
+multiple studies.  
+One of the simplest statistical methods in use is analysis of variance (ANOVA). ANOVA involves measuring the total 
+variance, or difference between sum of squares, between a control group and one or more experimental groups (Kirk, 
+2007). ANOVA is useful in certain contexts within bias detection: for example, ANOVA was used in MacNell et al.s 
+between-subjects study to verify that student behaviors such as engagement were not statistically significantly different 
+across groups (2015). However, ANOVA has its downsides: when used with data that has multiple dependent variables, 
+ANOVA is weak at showing causality (Northcott, 2008). To make up for the weaknesses of ANOVA in multivariate 
+data,  two other  statistical  methods  may  be  used:  ANCOVA  and MANOVA.  ANCOVA  adds  regression  analysis to 
+ [student] [student] 
+CS 6460 
+Spring 2019 
+ANOVA to control for multiple variables (Kirk, 2007), while MANOVA performs multiple iterations of ANOVA with 
+slight changes to independent variables such as time (OBrien & Kaiser, 1985). Together, these three statistical methods 
+can be used in an experimental design to quantitatively demonstrate causality for research topics such as bias in education. 
+Statistical methods often rely on meta-analysis or similar data-munging techniques to gather enough statistical data to 
+perform a reliable statistical analysis. In the cases where multiple datasets are used in a novel analysis, there are several 
+algorithms to test the quality of the data being concatenated. One such example of this is the fail-safe analysis, which 
+calculates  the  number  of  studies  that  would  need  to  refute  the  data  contained  within  the  meta-analysis  in  order  to 
+provide a significant rebuttal to the meta-analysis (Persaud, 1996). By verifying that the fail-safe analysis is sufficiently 
+high, a researcher is demonstrating that their meta-analysis uses a diverse set of data rather than just cherry-picking the 
+data that supports their research hypotheses the best.  Another technique specific to meta-analysis is the concept of 
+statistical mediation analysis, which is used in Forscher et al.s meta-analysis concerning the causality between implicit 
+bias and behavior (2016): 
+Of course, correlations between variables can be produced by many relationships besides ones that 
+are causal. To get closer to questions of causality, we looked at whether changes in implicit measures 
+correspond with and mediate changes in behavior in our sample of randomized experiments (p. 41). 
+However, Forscher et al. outlines many weaknesses in the mediation model, including the fact that not enough studies 
+may exist for the technique to be accurate, and even the studies that provide input to the mediation model may vary in 
+quality (2016). While meta-analysis is an interesting quantitative technique for biases that have been heavily studied, I 
+believe that its applicability towards bias in online education is limited until more data is available. 
+In my own research, I plan to perform a novel analysis for a couple of reasons: much of the data I want to experiment 
+with already exists and is easily accessible, and I want to maximize my findings within the time constraints of a semester-
+long course. While gathering enough evidence through controlled experiments might be outside of the scope of a single 
+semester of work, many of the methodologies used in controlled experiments can still be applied to a novel analysis, if 
+there is enough high-quality data. In fact, if the dataset being used for novel analysis is large enough such that certain 
+subsets of the data control for all variables except for the hypotheses being tested, the scientific method can be used to 
+demonstrate causality. This practice is also known as secondary data collection, and must be performed with several 
+precautions, including verifying that the data is properly cleaned and that the quantitative measures are internally and 
+externally valid (Hox & Boeije, 2005). External validity can be verified using ANOVA/ANCOVA/MANOVA, similarly 
+to the demonstrations shown earlier in this paper. Internal validity could be manually demonstrated by explaining the 
+procedural steps taken to avoid any biases that may be injected into the design of the experiment and analysis of the 
+data. 
+Quantitatively Measuring Algorithmic Bias 
+Many of the quantitative methods for measuring human bias are also somewhat applicable  to measuring algorithmic 
+bias. However, to truly understand the depth and severity of algorithmic bias, researchers are tasked with an additional 
+set of complexities, such as determining the source of the bias and proving algorithmic fairness. 
+Once statistical analysis is complete, it is fairly trivial in human-based bias studies to determine the individuals who hold 
+biases within a larger group of people, whereas it is significantly more difficult to single out a layer in a neural network 
+or a node in a decision tree that is biased within a multifaceted algorithm. In most cases, a decision-making algorithm 
+isnt even inherently biased until biased data is used to train the algorithm (Zarsky, 2016). Some researchers have found 
+ [student] [student] 
+CS 6460 
+Spring 2019 
+success in detecting and removing the subset of biased data from the larger dataset (Amorim, Cancado, & Veloso, 2018), 
+but not every dataset will have enough data to train AI models after biased data is removed. 
+An added roadblock to adopting algorithmic decision-making processes in the education system is the inherent need 
+for educators, students, and even parents to perceive the algorithm as fair. Humans inherently dont trust algorithms as 
+much as other humans to make decisions, because they believe that algorithmic decision-making processes do not have 
+the  capabilities  to  explain  their  decisions  like  a  human  might,  and  they  may  not  be  held  to  the  same  accountability 
+standards as humans are (Binns et al., 2018). It is clear that quantitatively detecting zero bias in an algorithm would not 
+necessarily be enough for people to be confident in its fairness. 
+While  OMSCS  still  relies  heavily  on  human  instructors  in  the  educational  process,  it  could  be  interesting  to  use 
+quantitative methods to detect bias in existing auto-grading algorithms across a dataset of existing papers. In the future, 
+perhaps the analysis of variance between auto-grading algorithms and human grades could even be used as a method of 
+detecting  human  bias,  once  the  algorithms  themselves  can  be  proven  to  be  fair  and  unbiased  themselves.  Many 
+challenges still remain to using algorithms as a quantitative method of demonstrating bias (or lack of it) manifested by 
+humans, but it is a promising area of research which deserves to be investigated. 
+ 
+ 
+ [student] [student] 
+CS 6460 
+Spring 2019 
+References 
+1.  Alavi, S. M., & Bordbar, S. (2018).  Differential Item  Functioning Analysis of High-Stakes Test in Terms of 
+Gender: A Rasch Model Approach. MOJES: Malaysian Online Journal of Educational Sciences, 5(1), 10-24. 
+2.  Amorim, E., Canado, M., & Veloso, A. (2018). Automated Essay Scoring in the Presence of Biased Ratings. 
+In Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human 
+Language Technologies, Volume 1 (Long Papers)(Vol. 1, pp. 229-237). 
+3.  Baker,  R.,  Dee,  T.,  Evans,  B.,  &  John,  J.  (2018).  Bias  in  online  classes:  Evidence  from  a  field  experiment. 
+In SREE  Spring  2015  Conference,  Learning  Curves:  Creating  and  Sustaining  Gains  from  Early  Childhood  through 
+Adulthood (pp. 5-7). 
+4.  Binns, R., Van Kleek, M., Veale, M., Lyngs, U., Zhao, J., & Shadbolt, N. (2018, April). 'It's Reducing a Human 
+Being to a Percentage': Perceptions of Justice in Algorithmic Decisions. In Proceedings of the 2018 CHI Conference 
+on Human Factors in Computing Systems (p. 377). ACM. 
+5.  Charness, G., Gneezy, U., & Kuhn, M. A. (2012). Experimental methods: Between-subject and within-subject 
+design. Journal of Economic Behavior & Organization, 81(1), 1-8. 
+6.  Cohen, M. R., & Nagel, E. (1934). An introduction to logic and scientific method. Oxford, England: Harcourt, Brace.  
+7.  Forscher, P. S., Lai, C., Axt, J., Ebersole, C. R., Herman, M., Devine, P. G., & Nosek, B. A. (2016). A meta-
+analysis of change in implicit bias. 
+8.  Greenwald,  A.  G.,  McGhee,  D.  E.,  &  Schwartz,  J.  L.  (1998).  Measuring  individual  differences  in  implicit 
+cognition: the implicit association test. Journal of personality and social psychology, 74(6), 1464. 
+9.  Hox, J. J., & Boeije, H. R. (2005). Data collection, primary versus secondary. Encyclopedia of Social Measurement, 
+1(1), 593-599. 
+10.  Jacoby-Senghor, D. S., Sinclair, S., & Shelton, J. N. (2016). A lesson in bias: The relationship between implicit 
+racial bias and performance in pedagogical contexts. Journal of Experimental Social Psychology, 63, 50-55. 
+11.  Kirk, R. E. (2007). Experimental design. The Blackwell Encyclopedia of Sociology. 
+12.  Kusner, M. J., Loftus, J., Russell, C., & Silva, R. (2017). Counterfactual fairness. In Advances in Neural Information 
+Processing Systems (pp. 4066-4076). 
+13.  MacNell, L., Driscoll, A., & Hunt, A. N. (2015). Whats in a name: Exposing gender bias in student ratings of 
+teaching. Innovative Higher Education, 40(4), 291-303. 
+14.  Malouff,  J.  M.,  &  Thorsteinsson,  E.  B.  (2016).  Bias  in  grading:  A  meta-analysis  of  experimental  research 
+findings. Australian Journal of Education, 60(3), 245-256. 
+15.  Northcott, R. (2008). Can ANOVA measure causal strength?. The Quarterly review of biology, 83(1), 47-55. 
+16.  O'Brien,  R.  G.,  &  Kaiser,  M.  K.  (1985).  MANOVA  method  for  analyzing  repeated  measures  designs:  an 
+extensive primer. Psychological bulletin, 97(2), 316. 
+17.  Persaud, R. (1996). Misleading meta-analysis. BMJ: British Medical Journal, 312(7023), 125. 
+18.  Saul, J. (2013). Scepticism and implicit bias. Disputatio, 5(37), 243-263. 
+19.  Unterhalter,  E.  (2017).  Negative  capability?  Measuring  the  unmeasurable 
+in  education. Comparative 
+Education, 53(1), 1-16. 
+20.  Xu, D., & Jaggars, S. S. (2014). Performance gaps between online and face-to-face courses: Differences across 
+types of students and academic subject areas. The Journal of Higher Education, 85(5), 633-659. 
+21.  Zarsky,  T.  (2016).  The  trouble  with  algorithmic  decisions:  An  analytic  road  map  to  examine  efficiency  and 
+fairness in automated and opaque decision making. Science, Technology, & Human Values, 41(1), 118-132.
