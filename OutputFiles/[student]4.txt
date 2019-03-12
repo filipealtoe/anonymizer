@@ -1,14 +1,9 @@
 Test Essay 4 
-
 Denise Grace Kutnick 
-
 [student] 
-
 Yesterday, Denise decided that she wanted to add an apostrophe in her name. Now, her name is 
-D’enise. 
-
-Today, D’enise decided that she wanted to stop using the apostrophe in her name. Now, her name is 
+Denise. 
+Today, Denise decided that she wanted to stop using the apostrophe in her name. Now, her name is 
 Denise again. 
-
 Similarly, people with the last name [student] may have their boarding passes printed as [student] or 
 [student] and we would need to anonymize all of that.

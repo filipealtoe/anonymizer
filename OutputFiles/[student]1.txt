@@ -1,15 +1,10 @@
 Test Essay 
-
-[student] [student] [student] – GTID: [student] 
-
+[student] [student] [student]  GTID: [student] 
 [student] 
-
  
-
 Introduction 
  
-
-This is [student]’s test PDF file for the anonymizer code. It include some basic test cases that [student] came up 
+This is [student]s test PDF file for the anonymizer code. It include some basic test cases that [student] came up 
 with.[student] created this file for testing purposes;[student] also published the anonymizer Python code. 
 Besides,[student] wants to test cases where improper punctuation is used to make sure the anonymization is 
 thorough. Why is this important?[student] believes it will make the anonymizer stronger.

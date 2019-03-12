@@ -1,11 +1,8 @@
 Test Essay 3 
-
 [student] [student] [student] 
-
 [student] [student] wants to test whether a fully capitalized version of her name (such as [student] [student] 
 [student]) gets anonymized correctly. She also wants to test whether a fully lowercase version of her 
 name (such as [student] [student] [student]) gets anonymized correctly. Additionally, she wants to test whether 
 a partially capitalized version of her name (such as [student] [student] [student]) gets anonymized correctly. 
-
 A potential addition to the anonymizer script would be to anonymize any initials that fall in between 
 first and last names (i.e. D. [student], D. G. [student], [student] G. [student], [student] K., etc.)
