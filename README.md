@@ -7,7 +7,13 @@ This repo will hold the Python script used to anonymize essays.
 This repo is compatible with python3. To get started, run the following:
 
 ```python3
-pip3 install -r requirements.txt
+# create a python3 virtual environment
+sudo apt-get install python3-venv
+python3 -m venv anonymizer-venv
+source anonymizer-venv/bin/activate
+# install requirements.txt to your virtual environment
+python3 -m pip install --requirement anonymizer/requirements.txt
+# run anonymizertest.py to generate anonymized outputs
 python3 anonymizertest.py
 ```
 
