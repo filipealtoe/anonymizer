@@ -1,11 +1,7 @@
 Test Essay 5 
-
 [student] [student] [student] 
-
 [student] 
-
-Sometimes, [student] likes to add emphasis into her essays. For example, when [student]’s mother yells at 
-her, she screams [student]’s full name: 
-
-“[student] [student] [student] why didn’t you send me a card for my anniversary? 
-Without your father and I, you wouldn’t have even been born!”
+Sometimes, [student] likes to add emphasis into her essays. For example, when [student]s mother yells at 
+her, she screams [student]s full name: 
+[student] [student] [student] why didnt you send me a card for my anniversary? 
+Without your father and I, you wouldnt have even been born!
