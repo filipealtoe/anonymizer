@@ -83,11 +83,18 @@ def extract_tokens(dirName="Tokens", fileName="Tokens.csv"):
     del alltokens[0]
     return alltokens
 
+def clean_text(text_str):
+    text = (text_str.encode("utf-8", "ignore")).decode("ascii", "ignore")
+    text = text.replace("\x0C", " ")
+    text = re.sub(r'[\t]+', " ", text)
+    text = re.sub(r'[\n\f\r]+', "\n", text)
+    return text
+
 def extract_Essay_Text(pdfFileName):
     with open(pdfFileName, "rb") as f:
         blobData = f.read()
-    
     text,metadata = pdf.PDF.extract(blobData)
+    text = clean_text(text)
     return text
 
 def save_output_file(dirName, fileName, textContent):
