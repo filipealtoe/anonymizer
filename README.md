@@ -1,6 +1,9 @@
 # Anonymizer
 
-This repo will hold the Python script used to anonymize essays. 
+This repo will hold the Python script used to anonymize essays used on IEEE LWMOOCS 2019 paper.
+To cite the paper:
+
+Altoe, F., & Joyner, D. (2019, October). Annotation-free automatic examination essay feedback generation. In 2019 IEEE Learning With MOOCS (LWMOOCS) (pp. 110-115). IEEE.
 
 ## Quick Start
 
